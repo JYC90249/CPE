@@ -21,3 +21,12 @@ int main(void)
         cout<<ans<<endl;
     }
 }
+/*
+Sample Input
+2
+2 2 4
+3 2 4 6
+Sample Output
+2
+4
+*/     
