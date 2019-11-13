@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 
-int namespace std;
+using namespace std;
 
 int main(void){
     string num;
-    while(getline(cin, num)){
-        if(num == '0'){
+    while(cin>>num){
+
+        if(num == "0"){
             break;
         }
         int odd = 0, even = 0;
@@ -16,7 +17,7 @@ int main(void){
         for(int i=1;i<num.length();i=i+2){
             even = even+(num[i]-'0');
         }
-        if(even-odd == 0){
+        if((odd-even)%11 == 0){
             cout<<num<<"is a multiple of 11."<<endl;
         }
         else{
