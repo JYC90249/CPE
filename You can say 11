@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+int namespace std;
+
+int main(void){
+    string num;
+    while(getline(cin, num)){
+        if(num == '0'){
+            break;
+        }
+        int odd = 0, even = 0;
+        for(int i=0;i<num.length();i=i+2){
+            odd = odd+(num[i]-'0');
+        }
+        for(int i=1;i<num.length();i=i+2){
+            even = even+(num[i]-'0');
+        }
+        if(even-odd == 0){
+            cout<<num<<"is a multiple of 11."<<endl;
+        }
+        else{
+            cout<<num<<"is not a multiple of 11."<<endl;
+        }
+    }
+    return 0;
+}
