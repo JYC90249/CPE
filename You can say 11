@@ -12,10 +12,10 @@ int main(void){
         }
         int odd = 0, even = 0;
         for(int i=0;i<num.length();i=i+2){
-            odd = odd+(num[i]-'0');
+            odd = odd+(num[i]-'0');     //超強小技巧
         }
         for(int i=1;i<num.length();i=i+2){
-            even = even+(num[i]-'0');
+            even = even+(num[i]-'0');       //真D好用 
         }
         if((odd-even)%11 == 0){
             cout<<num<<"is a multiple of 11."<<endl;
