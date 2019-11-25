@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int summing(int n){
+    int ans = 0;
+    while(n!=0){    //把數字加起來
+        ans = ans+n%10;
+        n = n/10;
+    }
+    return ans;
+}
+
+int main(void){
+    int n;
+    while(cin>>n){
+        if(n==0){
+        break;
+        }
+        while(n>9){     //大於9的話就繼續加起來
+            n = summing(n);
+        }
+        cout<<n<<endl;
+    }
+}
