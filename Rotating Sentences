@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main()
+{
+   vector<string> matrix;
+   string line;
+   int maxLineLength = 0;
+
+   cout << "Enter some lines (blank line to end)\n";
+   while ( getline( cin, line ) && line != "" )
+   {
+      matrix.push_back( line );
+      if ( maxLineLength < line.size() ) maxLineLength = line.size();
+   }
+
+   for ( int i = 0; i < maxLineLength; i++ )
+   {
+      for ( int j = 0; j < matrix.size(); j++ ) cout << ( i < matrix[j].size() ? matrix[j][i] : ' ' );
+      cout << endl;
+   }
+}
