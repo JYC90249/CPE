@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main(void){
+    long long int S, D;
+    while(cin>>S>>D){
+        int sum = 0, tmp = S;
+        while(1){
+            sum = sum + tmp;
+            if(sum>=D){
+                break;
+            }
+            tmp++;
+        }
+        cout<<tmp<<endl;
+    }
+}
+
